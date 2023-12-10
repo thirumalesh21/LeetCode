@@ -1,0 +1,93 @@
+/*
+54. Spiral Matrix
+*/
+
+import java.util.ArrayList;
+class Solution {
+    public List<Integer> spiralOrder(int[][] matrix) {
+ArraysList<Integer> list =new ArraysList<>();        int n = matrix.length;
+        int m = matrix[0].length;
+        int cs = 0 ,ce = m-1;
+        int rs = 0 ,re = n-1;
+        while(rs<=re&&cs<=ce){
+        for(int i = cs; i<=ce; i++){
+            list.add(matrix[rs][i]);
+        }
+        rs++;
+        for(int i = rs; i<=re; i++){
+            list.add(matrix[i][ce]);
+        }
+        ce--;
+        for(int i = ce; i>=cs; i--){
+            list.add(matrix[re][i]);
+        }
+        re--;
+        for(int i = re; i>=rs; i--){
+            list.add(matric[i][cs]);
+        }
+        cs++;
+        }
+        return list;
+
+
+
+
+        /*ArraysList<Integer> list =new ArraysList<>()
+        int n = matrix.length;
+        int m = matrix[0].length;
+        int cs = 0 ,ce = m-1;
+        int rs = 0 ,re = n-1;
+        while(rs<=re&&cs<=ce){
+        for(int i = cs; i<=ce; i++){
+            list.add(matrix[rs][i]);
+        }
+        rs++;
+        for(int i = rs; i<=re; i++){
+            list.add(matrix[i][ce]);
+        }
+        ce--;
+        for(int i = ce; i>=cs; i--){
+            list.add(matrix[re][i]);
+        }
+        re--;
+        for(int i = re; i>=rs; i--){
+            list.add(matric[i][cs]);
+        }
+        cs++;
+        }
+        return list;
+
+
+
+
+        /*int n=matrix.length;
+        int m=matrix[0].length;
+     ArrayList<Integer> ans = new ArrayList<>();      
+     int cs=0,ce=m-1;
+      int rs=0,re=n-1;
+      while(rs<=re&&cs<=ce){
+      for(int  i = cs; i <= ce; i++){
+          ans.add(matrix[rs][i]);
+      }
+      rs++;
+      for(int  i = rs; i <= re; i++){
+        ans.add(matrix[i][ce]);
+      }
+      ce--;
+      if(rs<=re){
+      for(int i = ce; i >= cs; i--){
+            ans.add(matrix[re][i]);
+      }
+      }
+      re--;
+      if(cs<=ce){
+      for(int i = re; i >= rs; i--){
+            ans.add(matrix[i][cs]);
+      }
+      }
+      cs++;
+      }
+      return ans;*/
+
+    }
+}
